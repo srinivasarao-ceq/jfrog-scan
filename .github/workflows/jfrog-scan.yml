@@ -38,4 +38,6 @@ jobs:
 
 
       - name: Scan the docker image with Jfrog- Xray
-        run: jf docker scan ${{ env.Image_name }}:${{ github.run_number }}
+        run: |
+          docker save --output my-image-docker.tar ${{ env.Image_name }}:${{ github.run_number }}
+          jf s my-image-docker.tar
