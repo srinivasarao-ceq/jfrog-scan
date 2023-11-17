@@ -36,8 +36,7 @@ jobs:
           push: false
           tags: ${{ env.Image_name }}:${{ github.run_number }}
 
-
       - name: Scan the docker image with Jfrog- Xray
         run: |
-          docker save --output my-image-docker.tar ${{ env.Image_name }}:${{ github.run_number }}
+          docker images
           jf docker scan ${{ env.Image_name }}:${{ github.run_number }}
