@@ -30,6 +30,8 @@ jobs:
 
       - name: Build  Docker image
         run: docker build -t ${{ env.Image_name }}:${{ github.run_number }} .
+      
+      - name: scan the docker image
         run: |
           docker images
           jf docker scan ${{ env.Image_name }}:${{ github.run_number }}
