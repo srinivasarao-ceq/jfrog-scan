@@ -1,0 +1,7 @@
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\test-project.exe
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\appsettings.Development.json
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\appsettings.json
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\test-project.dll
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\test-project.deps.json
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\test-project.runtimeconfig.json
+C:\Users\MaddilaSrinivasaRao\Desktop\Xray\ceq-mcd-poc-jenkinstogithub-main\out\test-project.pdb

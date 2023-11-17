@@ -1,0 +1,41 @@
+name: .Net application scan with Jfrog Xray
+on:
+  # push:
+  workflow_dispatch:
+
+env:
+  Image_name: myapp
+jobs:
+  Jfrog-configuration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configure Jfrog CLI
+        uses: jfrog/setup-jfrog-cli@v3
+        env:
+          JF_URL: ${{ secrets.JF_URL }}
+          JF_USER: ${{ secrets.JF_USER }}
+          JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+
+      - name: checkout the code
+        uses: actions/checkout@v3
+        
+      - name: Scan the .Net application
+        run: jf audit --watches "demo"
+  
+      - name: Set up Docker 
+        uses: docker/setup-buildx-action@v1
+      
+      - name: Login to Docker Hub
+        run: docker login -u ${{ secrets.JFROG_DOCKER_USERNAME }} -p ${{ secrets.JFROG_DOCKER_TOKEN}}
+
+      - name: Build  Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile # Path to your Dockerfile
+          push: false
+          tags: ${{ secrets.JFROG_DOCKER_USERNAME }}/docker-local-demo/${{ env.Image_name }}:${{ github.run_number }}
+
+
+      - name: Scan the docker image with Jfrog- Xray
+        run: jf docker scan ${{ secrets.JFROG_DOCKER_USERNAME }}/docker-local-demo/${{ env.Image_name }}:${{ github.run_number }}

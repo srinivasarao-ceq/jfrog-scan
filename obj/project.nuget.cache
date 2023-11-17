@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "IW+cPOswQBvsVhsaqzE5K1RmVQfOnsTVXy4RKsUqFzzdegfR1M2QsROTR3oCivwuLWDI4L1W5USkR1gNp2WAQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MaddilaSrinivasaRao\\Desktop\\Xray\\ceq-mcd-poc-jenkinstogithub-main\\test-project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MaddilaSrinivasaRao\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\MaddilaSrinivasaRao\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\MaddilaSrinivasaRao\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\MaddilaSrinivasaRao\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}
